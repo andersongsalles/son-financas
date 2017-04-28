@@ -1,0 +1,38 @@
+Anatoacoes php curso financeiro pessoal
+
+***&&&****
+composer init
+
+****
+composer dumpautoload
+
+******biblioteca migration robmorgan/phinx
+composer require robmorgan/phinx:0.7.1
+
+vendor/bin/phinx.bat migrate
+***Tipo de conexao
+vendor/bin/phinx.bat migrate e production
+
+***reverter uma migration especifica
+vendor/bin/phinx.bat rollback -t=20170412191958
+
+***reverter por completo
+vendor/bin/phinx.bat rollback -t=0
+
+***Seede
+vendor/bin/phinx seed:create CategoryCostsSeeder
+*
+vendor/bin/phinx seed:run
+
+***Faker
+composer require fzaninotto/faker:1.6.0 --dev
+
+***Rollback migrate - seed
+php migrate-seed.php
+
+*** Container de Serviço
+https://github.com/xtreamwayz/pimple-container-interop
+composer require xtreamwayz/pimple-container-interop
+
+*** composer require aura/router:3.1.0
+*** composer require zendframework/zend-diactoros:1.3.10
